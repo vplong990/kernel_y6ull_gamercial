@@ -208,8 +208,8 @@
             interrupt-parent = <&gpio1>;                                                                                        
             interrupts = <5 IRQ_TYPE_EDGE_FALLING>;                                                                             
             reset-gpios = <&gpio5 2  GPIO_ACTIVE_LOW>;                                                                          
-            touchscreen-size-x=<800>;                                                                                          
-            touchscreen-size-y=<480>;                                                                                           
+            touchscreen-size-x=<480>;                                                                                          
+            touchscreen-size-y=<272>;                                                                                           
     };    
 
     ov2659: ov2659@30 {
@@ -324,24 +324,6 @@
 				pixelclk-active = <0>;
 			};
 
-			/*7.0-inch
-			timing1: timing1 {
-				clock-frequency = <33000000>;
-				hactive = <800>;
-				vactive = <480>;
-				hfront-porch = <210>;
-				hback-porch = <46>;
-				hsync-len = <1>;
-				vback-porch = <22>;
-				vfront-porch = <23>;
-				vsync-len = <20>;
-		
-				hsync-active = <0>;
-				vsync-active = <0>;
-				de-active = <1>;
-				pixelclk-active = <0>;
-		};
-			*/
 		};
 	};
 };
