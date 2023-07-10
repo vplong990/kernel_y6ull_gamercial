@@ -324,7 +324,7 @@
 				pixelclk-active = <0>;
 			};
 
-			/*7.0-inch*/
+			/*7.0-inch
 			timing1: timing1 {
 				clock-frequency = <33000000>;
 				hactive = <800>;
@@ -341,7 +341,7 @@
 				de-active = <1>;
 				pixelclk-active = <0>;
 		};
-
+			*/
 		};
 	};
 };
