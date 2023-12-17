@@ -1,5 +1,9 @@
 // SPDX-License-Identifier: GPL-2.0
+<<<<<<< HEAD
 // Fix 11/12/2023 Vinh
+=======
+// Fixed v1.0 by Vinh
+>>>>>>> parent of f43cec616366... vinh fix 1.1
 // Copyright (C) 2015 Freescale Semiconductor, Inc.
 
 / {
@@ -344,12 +348,15 @@
 	status = "okay";
 };
 
+<<<<<<< HEAD
 &uart7 {
 	pinctrl-names = "default";
 	pinctrl-0 = <&pinctrl_uart7>;
 	status = "okay";
 };
 
+=======
+>>>>>>> parent of f43cec616366... vinh fix 1.1
 &uart2 {
 	pinctrl-names = "default";
 	pinctrl-0 = <&pinctrl_uart2>;
@@ -585,6 +592,7 @@
 		>;
 	};
 	
+<<<<<<< HEAD
 	pinctrl_uart3: uart3grp {
 		fsl,pins = <
 			MX6UL_PAD_UART3_TX_DATA__UART3_DCE_TX	0x1b0b1
@@ -592,6 +600,8 @@
 		>;
 	};
 	
+=======
+>>>>>>> parent of f43cec616366... vinh fix 1.1
 	pinctrl_uart7: uart7grp {
 		fsl,pins = <
 			MX6UL_PAD_LCD_DATA16__UART7_DCE_TX	0x1b0b1
