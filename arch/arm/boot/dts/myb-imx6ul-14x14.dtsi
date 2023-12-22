@@ -495,8 +495,8 @@
             MX6UL_PAD_GPIO1_IO09__GPIO1_IO09    0x17059 /* LCD_DISP */
             MX6UL_PAD_NAND_CE1_B__GPIO4_IO14    0x17059 /* LTE Reset */
             //MX6UL_PAD_LCD_ENABLE__GPIO3_IO01    0x000010B0
-           MX6UL_PAD_UART3_TX_DATA__GPIO1_IO24        0x000030B0
-	   MX6UL_PAD_UART3_RX_DATA__GPIO1_IO25        0x000010B0
+           //MX6UL_PAD_UART3_TX_DATA__GPIO1_IO24        0x000030B0
+	   //MX6UL_PAD_UART3_RX_DATA__GPIO1_IO25        0x000010B0
 
             MX6UL_PAD_UART3_RTS_B__GPIO1_IO27          0x000010B0
             MX6UL_PAD_UART3_CTS_B__GPIO1_IO26          0x000010B0
@@ -697,6 +697,13 @@
 		>;
 	};
 	
+	pinctrl_uart3: uart3grp {
+		fsl,pins = <
+			MX6UL_PAD_UART3_TX_DATA__UART3_DCE_TX	0x1b0b1
+			MX6UL_PAD_UART3_RX_DATA__UART3_DCE_RX	0x1b0b1
+		>;
+	};
+	
 	pinctrl_uart7: uart7grp {
 		fsl,pins = <
 			MX6UL_PAD_LCD_DATA16__UART7_DCE_TX	0x1b0b1
@@ -704,14 +711,7 @@
 		>;
 	};
 	
-	pinctrl_uart3: uart3grp {
-		fsl,pins = <
-			MX6UL_PAD_UART3_TX_DATA__UART3_DCE_TX	0x1b0b1
-			MX6UL_PAD_UART3_RX_DATA__UART3_DCE_RX	0x1b0b1
-		>;
-	};
-                           
-
+	
 	pinctrl_uart2dte: uart2dtegrp {
 		fsl,pins = <
 			MX6UL_PAD_UART2_TX_DATA__UART2_DTE_RX	0x1b0b1
