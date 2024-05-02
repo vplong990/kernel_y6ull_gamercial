@@ -182,11 +182,6 @@
 	pinctrl-0 = <&pinctrl_i2c2>;
 	status = "okay";
 
-	rtc@68{
-      compatible = "ds1307";
-      reg = <0x68>;
-   	};
-
     codec: wm8904@1a {
         #sound-dai-cells = <0>;
         compatible = "wlf,wm8904";
@@ -207,7 +202,7 @@
                 //assigned-clocks = <&mclk>;
                 //assigned-clock-rates = <1250000>;
         };
-*/    
+    
     ft5x06: ft5x06@38 {                                                                                                         
         compatible = "edt,edt-ft5406", "edt,edt-ft5x06";                                                                        
             reg = <0x38>;                                                                                                       
@@ -219,7 +214,7 @@
             touchscreen-size-x=<800>;                                                                                          
             touchscreen-size-y=<480>;                                                                                           
     };    
-
+*/
     ov2659: ov2659@30 {
         compatible = "ovti,ov2659";
         reg = <0x30>;
@@ -238,6 +233,18 @@
         };
     };
 };
+
+&i2c3 {
+     clock-frequency = <100000>;
+     pinctrl-names = "default";
+     pinctrl-0 = <&pinctrl_i2c3>;
+     status = "okay";
+
+    rtc: rtc@68 {
+        compatible = "microchip,mcp7940x";
+        reg = <0x68>;
+    };
+ };
 
 &fec1 {
 	pinctrl-names = "default";
