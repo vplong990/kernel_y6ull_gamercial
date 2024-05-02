@@ -2,7 +2,8 @@
 // Fixed v1.3 - Long
 // Updated : Changed remote git
 // Copyright (C) 2015 Freescale Semiconductor, Inc.
-// noted UART3 => ttyxmc2
+// UART3 => ttyxmc2 
+// UART7 => ttyxmc6
 
 / {
 	chosen {
