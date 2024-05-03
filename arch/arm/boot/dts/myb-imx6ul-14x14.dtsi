@@ -181,6 +181,7 @@
 	pinctrl-names = "default";
 	pinctrl-0 = <&pinctrl_i2c2>;
 	status = "okay";
+
 // Add rtc ds1307 module 
 	rtc: rtc@68 {
         
