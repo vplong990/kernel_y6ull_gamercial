@@ -165,7 +165,7 @@
 	assigned-clocks = <&clks IMX6UL_CLK_PLL4_AUDIO_DIV>;
 	assigned-clock-rates = <786432000>;
 };
-
+/*
 &csi {
 	status = "okay";
 
@@ -175,7 +175,7 @@
         };
     };
 };
-
+*/
 &i2c2 {
 	clock-frequency = <100000>;
 	pinctrl-names = "default";
@@ -221,7 +221,7 @@
             touchscreen-size-x=<800>;                                                                                          
             touchscreen-size-y=<480>;                                                                                           
     };    
-*/
+
     ov2659: ov2659@30 {
         compatible = "ovti,ov2659";
         reg = <0x30>;
@@ -239,7 +239,7 @@
             };
         };
     };
-	
+*/	
 };
 
 &fec1 {
