@@ -221,7 +221,7 @@
             touchscreen-size-x=<800>;                                                                                          
             touchscreen-size-y=<480>;                                                                                           
     };    
-
+*/
     ov2659: ov2659@30 {
         compatible = "ovti,ov2659";
         reg = <0x30>;
@@ -239,7 +239,7 @@
             };
         };
     };
-*/	
+	
 };
 
 &fec1 {
