@@ -183,8 +183,9 @@
 	status = "okay";
 
 	rtc: rtc@68 {
-        compatible = "dallas,rtc-ds1307";
-        reg = <0x68>;
+        //compatible = "dallas,rtc-ds1307";
+        compatible = "microchip,mcp7940x";
+		reg = <0x68>;
 	};
 
     codec: wm8904@1a {
