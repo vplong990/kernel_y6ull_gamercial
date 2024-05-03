@@ -181,9 +181,9 @@
 	pinctrl-names = "default";
 	pinctrl-0 = <&pinctrl_i2c2>;
 	status = "okay";
-
+// Add rtc ds1307 module 
 	rtc: rtc@68 {
-        //compatible = "dallas,rtc-ds1307";
+        
         compatible = "microchip,mcp7940x";
 		reg = <0x68>;
 	};
@@ -220,7 +220,7 @@
             touchscreen-size-x=<800>;                                                                                          
             touchscreen-size-y=<480>;                                                                                           
     };    
-*/
+
     ov2659: ov2659@30 {
         compatible = "ovti,ov2659";
         reg = <0x30>;
@@ -238,20 +238,9 @@
             };
         };
     };
+*/	
 };
-/*
-&i2c3 {
-     clock-frequency = <100000>;
-     pinctrl-names = "default";
-     pinctrl-0 = <&pinctrl_i2c3>;
-     status = "okay";
 
-    rtc: rtc@68 {
-        compatible = "microchip,mcp7940x";
-        reg = <0x68>;
-    };
- };
-*/
 &fec1 {
 	pinctrl-names = "default";
 	pinctrl-0 = <&pinctrl_enet1>;
@@ -866,6 +855,7 @@
     pinctrl_gpio_key: keygrp {
         fsl,pins = <
             MX6UL_PAD_SNVS_TAMPER0__GPIO5_IO00 0x1b0b0
+			//Add GPIO Pins as pull up
 			MX6UL_PAD_CSI_DATA06__GPIO4_IO27 0xf0a1 // pull up 22k
             MX6UL_PAD_CSI_DATA07__GPIO4_IO28 0xf0a1 // pull up 22k
         >;
