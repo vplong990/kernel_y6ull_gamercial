@@ -857,8 +857,9 @@
         fsl,pins = <
             MX6UL_PAD_SNVS_TAMPER0__GPIO5_IO00 0x1b0b0
 			//Add GPIO Pins as pull up
-			MX6UL_PAD_CSI_DATA06__GPIO4_IO27 0xf0a1 // pull up 22k
             MX6UL_PAD_CSI_DATA07__GPIO4_IO28 0xf0a1 // pull up 22k
+			//Add GPIO Pins as pull down
+			MX6UL_PAD_CSI_DATA06__GPIO4_IO27 0x30a1 // pull down 100k
         >;
     };
   };
