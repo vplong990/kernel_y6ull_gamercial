@@ -99,8 +99,8 @@ static void option_instat_callback(struct urb *urb);
 
 /* Meig PRODUCTS */
 
-#define MEIG_VENDOR_ID				0x0c56
-#define MEIG_PRODUCT_SML750			0xf601
+#define MEIG_VENDOR_ID				0x05C6
+#define MEIG_PRODUCT_750			0xF601
 
 /*
  * NOVATEL WIRELESS PRODUCTS
@@ -588,6 +588,8 @@ static void option_instat_callback(struct urb *urb);
 
 
 static const struct usb_device_id option_ids[] = {
+	{ USB_DEVICE(0x05C6, 0xF601) },
+	{ USB_DEVICE(MEIG_VENDOR_ID,MEIG_PRODUCT_750) },
 	{ USB_DEVICE(OPTION_VENDOR_ID, OPTION_PRODUCT_COLT) },
 	{ USB_DEVICE(OPTION_VENDOR_ID, OPTION_PRODUCT_RICOLA) },
 	{ USB_DEVICE(OPTION_VENDOR_ID, OPTION_PRODUCT_RICOLA_LIGHT) },
