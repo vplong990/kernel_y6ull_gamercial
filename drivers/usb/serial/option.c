@@ -97,6 +97,11 @@ static void option_instat_callback(struct urb *urb);
 #define YISO_VENDOR_ID				0x0EAB
 #define YISO_PRODUCT_U893			0xC893
 
+/* Meig PRODUCTS */
+
+#define MEIG_VENDOR_ID				0x0c56
+#define MEIG_PRODUCT_SML750			0xf601
+
 /*
  * NOVATEL WIRELESS PRODUCTS
  *
