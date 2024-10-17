@@ -930,6 +930,25 @@ static const struct driver_info	qmi_wwan_info_quirk_dtr = {
 	.driver_info = (unsigned long)&qmi_wwan_info_quirk_dtr
 
 static const struct usb_device_id products[] = {
+#if 1 //Added by Quectel
+#ifndef QMI_FIXED_INTF
+/* map QMI/wwan function by a fixed interface number */
+#define QMI_FIXED_INTF(vend, prod, num) \
+	.match_flags = USB_DEVICE_ID_MATCH_DEVICE | USB_DEVICE_ID_MATCH_INT_INFO, \
+	.idVendor = vend, \
+	.idProduct = prod, \
+	.bInterfaceClass = 0xff, \
+	.bInterfaceSubClass = 0xff, \
+	.bInterfaceProtocol = 0xff, \
+	.driver_info = (unsigned long)&qmi_wwan_force_int##num,
+#endif
+	{ QMI_FIXED_INTF(0x05C6, 0x9003, 4) }, /* Quectel UC20 */
+	{ QMI_FIXED_INTF(0x05C6, 0x9215, 4) }, /* Quectel EC20 */
+	{ QMI_FIXED_INTF(0x2C7C, 0x0125, 4) }, /* Quectel EC25/EC20 R2.0 */
+	{ QMI_FIXED_INTF(0x2C7C, 0x0121, 4) }, /* Quectel EC21 */
+	{ QMI_FIXED_INTF(0x05c6, 0xf601, 5) }, /* 750 */
+	{ QMI_FIXED_INTF(0x05c6, 0x9025, 4) }, /* 9x50 */
+#endif
 	/* 1. CDC ECM like devices match on the control interface */
 	{	/* Huawei E392, E398 and possibly others sharing both device id and more... */
 		USB_VENDOR_AND_INTERFACE_INFO(HUAWEI_VENDOR_ID, USB_CLASS_VENDOR_SPEC, 1, 9),
@@ -1172,7 +1191,7 @@ static const struct usb_device_id products[] = {
 	{QMI_FIXED_INTF(0x05c6, 0x90b2, 3)},    /* ublox R410M */
 	{QMI_FIXED_INTF(0x05c6, 0x920d, 0)},
 	{QMI_FIXED_INTF(0x05c6, 0x920d, 5)},
-	{QMI_FIXED_INTF(0x05c6, 0xf601, 5)}, /* SML750 */
+	/*	{QMI_FIXED_INTF(0x05c6, 0xf601, 5)},  SML750 */
 	{QMI_QUIRK_SET_DTR(0x05c6, 0x9625, 4)},	/* YUGA CLM920-NC5 */
 	{QMI_FIXED_INTF(0x0846, 0x68a2, 8)},
 	{QMI_FIXED_INTF(0x0846, 0x68d3, 8)},	/* Netgear Aircard 779S */
