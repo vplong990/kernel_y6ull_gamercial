@@ -1010,7 +1010,7 @@ struct usb_driver *usb_cdc_wdm_register(struct usb_interface *intf,
 {
 	int rv;
 
-	rv = wdm_create(intf, ep, bufsize, manage_power,false);
+	rv = wdm_create(intf, ep, bufsize, manage_power);
 	if (rv < 0)
 		goto err;
 
