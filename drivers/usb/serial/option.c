@@ -238,7 +238,7 @@ static void option_instat_callback(struct urb *urb);
 #define BANDRICH_PRODUCT_1012			0x1012
 
 
-/*#define QUALCOMM_VENDOR_ID			0x05C6*/
+#define QUALCOMM_VENDOR_ID			0x05C6
 /* These Quectel products use Qualcomm's vendor ID */
 #define QUECTEL_PRODUCT_UC20			0x9003
 #define QUECTEL_PRODUCT_UC15			0x9090
@@ -2171,6 +2171,7 @@ static int option_probe(struct usb_serial *serial,
 		
 	if (serial->dev->descriptor.idVendor == MEIG_VENDOR_ID && (serial->dev->descriptor.idProduct == MEIG_PRODUCT_750) && serial->interface->cur_altsetting->desc.bInterfaceNumber >= 4)
 		return -ENODEV;
+		
 	/* Store the device flags so we can use them during attach. */
 	usb_set_serial_data(serial, (void *)device_flags);
 
