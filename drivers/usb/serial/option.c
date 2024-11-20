@@ -1099,9 +1099,9 @@ static const struct usb_device_id option_ids[] = {
 	{ USB_DEVICE(QUALCOMM_VENDOR_ID, 0x0023)}, /* ONYX 3G device */
 	{ USB_DEVICE(QUALCOMM_VENDOR_ID, 0x9000), /* SIMCom SIM5218 */
 	  .driver_info = NCTRL(0) | NCTRL(1) | NCTRL(2) | NCTRL(3) | RSVD(4) },
-	/*Sml750 Qualcomm MDM9207 - 0: DIAG, 2: AT, 3: NMEA */
+	/*Sml750 Qualcomm MDM9207 - 0: DIAG, 1: modem, 2: AT, 3: NMEA, 4: adb, 5: QMI */
 	{ USB_DEVICE(QUALCOMM_VENDOR_ID, 0xf601), 
-	  .driver_info = RSVD(1) | RSVD(4) | RSVD(5) },	
+	  .driver_info = RSVD(4) | RSVD(5) },	
 	/* Quectel products using Qualcomm vendor ID */
 	{ USB_DEVICE(QUALCOMM_VENDOR_ID, QUECTEL_PRODUCT_UC15)},
 	{ USB_DEVICE(QUALCOMM_VENDOR_ID, QUECTEL_PRODUCT_EC20)},
