@@ -2167,7 +2167,7 @@ static int option_probe(struct usb_serial *serial,
 	if (device_flags & NUMEP2 && iface_desc->bNumEndpoints != 2)
 		return -ENODEV;
 		
-	if (serial->dev->descriptor.idVendor == MEIG_VENDOR_ID && (serial->dev->descriptor.idProduct == MEIG_PRODUCT_750) && serial->interface->cur_altsetting->desc.bInterfaceNumber >= 4)
+	if (serial->dev->descriptor.idVendor == QUALCOMM_VENDOR_ID && (serial->dev->descriptor.idProduct == MEIG_PRODUCT_750) && serial->interface->cur_altsetting->desc.bInterfaceNumber >= 5)
 		return -ENODEV;
 		
 	/* Store the device flags so we can use them during attach. */
