@@ -2,9 +2,10 @@
 // Fixed v1.3 - Long
 // Updated : Changed remote git
 // Copyright (C) 2015 Freescale Semiconductor, Inc.
-// UART3 => ttyxmc2 
-// UART7 => ttyxmc6
-
+// UART3 => ttymxc2 
+// UART7 => ttymxc6
+// RS485 => ttymxc3
+// RS232 => ttymxc1
 / {
 	chosen {
 		stdout-path = &uart1;
