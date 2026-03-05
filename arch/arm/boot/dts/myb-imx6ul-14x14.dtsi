@@ -120,7 +120,7 @@
                    "IN1L", "Mic Jack";                                                                                         
     }; 
 
-/*
+
 	sound {
                 #address-cells = <1>;
                 #size-cells = <0>;
@@ -158,7 +158,7 @@
                         };
           };
 	};
-*/
+
 
 };
 
@@ -199,7 +199,7 @@
         wlf,shared-lrclk;
     };
 
-/*
+
     wm8904: audio-codec@1a {
                 #sound-dai-cells = <0>;
                 compatible = "wlf,wm8904";
@@ -210,7 +210,7 @@
                 //assigned-clocks = <&mclk>;
                 //assigned-clock-rates = <1250000>;
         };
-    
+/*    
     ft5x06: ft5x06@38 {                                                                                                         
         compatible = "edt,edt-ft5406", "edt,edt-ft5x06";                                                                        
             reg = <0x38>;                                                                                                       
