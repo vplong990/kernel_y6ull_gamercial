@@ -101,7 +101,7 @@
                     linux,code = <KEY_1>;
             };
     };
-
+/*
     sound {                                                                                                                     
            compatible = "fsl,imx6ul-evk-wm8904",                                                                               
                        "fsl,imx-audio-wm8904";                                                                                 
@@ -119,7 +119,7 @@
                    "Mic Jack", "MICBIAS",                                                                                      
                    "IN1L", "Mic Jack";                                                                                         
     }; 
-
+*/
 
 	sound {
                 #address-cells = <1>;
@@ -189,7 +189,7 @@
         compatible = "microchip,mcp7940x";
 		reg = <0x68>;
 	};
-
+/*
     codec: wm8904@1a {
         #sound-dai-cells = <0>;
         compatible = "wlf,wm8904";
@@ -198,7 +198,7 @@
         clock-names = "mclk";
         wlf,shared-lrclk;
     };
-
+*/
 
     wm8904: audio-codec@1a {
                 #sound-dai-cells = <0>;
