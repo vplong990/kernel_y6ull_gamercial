@@ -104,6 +104,7 @@ static int imx_hifi_hw_params(struct snd_pcm_substream *substream,
 			return ret;
 		}
 
+		dev_dbg(dev, "cpu dai tdm slot set successfully\n");
 		/* dev_err(dev, "params : %d\n", ret); */
 	    ret = snd_soc_dai_set_sysclk(codec_dai, WM8904_CLK_MCLK,
 			0, SND_SOC_CLOCK_IN);
